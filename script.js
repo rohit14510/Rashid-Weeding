@@ -16,6 +16,13 @@ $(document).ready(function(){
 });
 
 //Hero Slider
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#splide', {
+        type: 'loop',
+        perPage: 1,
+        autoplay: true,
+    }).mount();
+});
 var swiper = new Swiper(".mySwiper", {
     pagination: {
       el: ".swiper-pagination",
