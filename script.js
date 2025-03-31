@@ -1,3 +1,20 @@
+$(document).ready(function(){
+    $(".mobile-menuicon").click(function(){
+        $(".mobile-menu").css("left", "0");  // Menu को दिखाने के लिए
+    });
+
+    $(".close-menu").click(function(){
+        $(".mobile-menu").css("left", "-100%");  // Menu को छुपाने के लिए
+    });
+
+    // Menu के बाहर क्लिक करने पर भी बंद करने का ऑप्शन
+    $(document).click(function(event) {
+        if (!$(event.target).closest('.mobile-menu, .mobile-menuicon').length) {
+            $(".mobile-menu").css("left", "-100%");
+        }
+    });
+});
+
 //Hero Slider
 var swiper = new Swiper(".mySwiper", {
     pagination: {
@@ -52,20 +69,23 @@ var swiper = new Swiper(".mySwiper", {
     startCounter();  // लोड होने पर भी काउंटर चलेगा
 });
 // testi slider
-// const swiper = new Swiper('.testimonial-slider', {
-//     slidesPerView: 1,             
-//     spaceBetween: 20,                
-//     loop: true,                     
-//     autoplay: {
-//         delay: 3000,                
-//         disableOnInteraction: false,
-//     },
-//     pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//     },
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     }
-// });
+document.addEventListener("DOMContentLoaded", () => {
+    const swiper = new Swiper(".testimonial-slider", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  });
+  

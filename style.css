@@ -26,23 +26,7 @@ body button {
 
   /* =======Header Start========== */
 
-  .logo-container{
-    background-color: #fa4dac;
-    padding: 20px;
-  }
- 
- 
-  .logo-container:after {
-    content: '';
-    position: absolute;
-    left:250px;
-    top: 0%;
-    width: 100px;
-    height: 50%;
-    background: #FA4DAC;
-    transform: skewX(-25deg);
 
-  }
   .navbar-nav {
     display: flex;
     flex-direction: row;
@@ -594,6 +578,11 @@ body button {
   transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+  .cate-wedding-section{
+    margin-top: 80px;
+  }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .client-grid {
@@ -655,11 +644,7 @@ body button {
   font-weight: 600;
   background-color: #eee;
 }
-.f-logo{
-  display: inline;
-  background-color: #fa4dac;
-  padding: 10px;
-}
+
 .f-box,
 .footer-section .map {
   margin-top: 20px;
